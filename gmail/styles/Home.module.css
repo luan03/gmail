@@ -1,11 +1,11 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1400px;
+  margin: 40px auto 0 auto;
 }
 
 .header {
@@ -31,22 +31,89 @@
   width: 270px;
   background-color: #222327;
   border-right: 1px solid #2B2C30;
+  border-bottom-left-radius: 6px;
 }
 
 .mails {
-  width: 420px;
+  width: 490px;
   background-color: #222327;
   border-right: 1px solid #2B2C30;
+}
+.mails ul {
+  margin: 0;
+  padding: 0;
+}
+.mails li {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+.mails li:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 40px);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-bottom: 1px solid #2B2C30;
+}
+.mails .left {
+  width: 90px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  padding: 0 6px;
+}
+.mails img {
+  border-radius: 50%;
+}
+.mails .checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 2px solid #434448;
+  cursor: pointer;
+}
+
+.mails .right {
+  flex: 1;
+}
+.mails .name {
+  color: #FFFEFF;
+  display: block;
+  font-size: 14px;
+}
+.mails .time {
+  float: right;
+  color: #797A7C;
+  font-size: 12px;
+}
+.mails .title {
+  display: block;
+  font-size: 14px;
+  color: #FEFFFF;
+  font-weight: 300;
+  padding: 8px 0 8px 0;
+}
+.mails .preview {
+  font-weight: 300;
+  line-height: 13px;
+  font-size: 13px;
+  color: #C9CACE;
 }
 
 .message {
   background-color: #222327;
   flex: 1;
+  border-bottom-right-radius: 6px;
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+
 }
